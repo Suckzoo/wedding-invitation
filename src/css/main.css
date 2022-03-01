@@ -218,8 +218,26 @@ main {
   color: #fff;
   border-radius: 50%;
 }
+.calendar .gcalendar-row {
+  display: flex;
+  justify-content: space-around;
+}
 
 /* 코비드 안내 */
+.google-calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffdc6f; 
+  padding-bottom: 1rem;  
+  font-size: 0.7rem;
+  color : #4e3e0a;
+}
+
+.google-calendar a {
+  color: #000;
+}
+
 .covid-noti {
   display: flex;
   justify-content: center;

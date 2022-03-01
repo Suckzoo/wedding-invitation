@@ -162,8 +162,77 @@ function registerOnclickListeners() {
     })
 }
 
+function getWeek(targetDate: Date): number {
+    const date = new Date(targetDate);
+    date.setHours(0, 0, 0, 0);
+    // Thursday in current week decides the year.
+    date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+    // January 4 is always in week 1.
+    const week1 = new Date(date.getFullYear(), 0, 4);
+    // Adjust to Thursday in week 1 and count number of weeks from date to week1.
+    return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000
+        - 3 + (week1.getDay() + 6) % 7) / 7);
+}
+
+function initCalendar(targetDate: Date) {
+    const year = targetDate.getFullYear();
+    const month = targetDate.getMonth();
+    const date = targetDate.getDate();
+    const startOfMonth = new Date(year, month, 1);
+    const endOfMonth = new Date(year, month + 1, 0);
+    const eomDate = endOfMonth.getDate();
+
+    const contents = document.getElementById('calendar-contents');
+    const root = document.createElement('time');
+    root.setAttribute('datetime', `${year}-${month + 1}`)
+    contents.appendChild(root);
+
+    let row = document.createElement('time');
+    let week = getWeek(startOfMonth);
+    row.setAttribute('datetime', `${year}-W${week}`);
+    root.appendChild(row);
+    row.className = 'row';
+
+    for(let i = 0; i < startOfMonth.getDay(); i++) {
+        alert('no');
+        const cell = document.createElement('time');
+        cell.innerHTML = '&nbsp;';
+        row.appendChild(cell);
+    }
+    let currDay = startOfMonth.getDay();
+    let currDate = 1;
+    while(currDate <= eomDate) {
+        const cell = document.createElement('time');
+        cell.setAttribute('datetime', `${year}-${month + 1}-${currDate}`);
+        cell.innerHTML = currDate.toString();
+        if (currDate === date) {
+            cell.className = 'active';
+        }
+        row.appendChild(cell);
+        currDate++;
+        currDay++;
+        if (currDate > eomDate) {
+            for(let i = 0; i < 7 - currDay; i++) {
+                const cell = document.createElement('time');
+                cell.innerHTML = '&nbsp;';
+                row.appendChild(cell);
+            }
+        }
+        if (currDay === 7 && currDate <= eomDate) {
+            week++;
+            row = document.createElement('time');
+            row.setAttribute('datetime', `${year}-W${week}`);
+            root.appendChild(row);
+            row.className = 'row';
+            currDay = 0;
+        }
+    }
+}
+
 
 (function() {
+    // js month는 0월부터다!!!!
+    initCalendar(new Date(2022, 4, 22, 11, 30));
     initLightGallery();
     initKakaoSDK();
     initKakaoMap();
