@@ -176,7 +176,6 @@
         </address>
         <address class="addr_lst">서울 구로구 경인로 624(신도림동 427-3)</address>
         <a href="tel:+0221622100" class="tel">Tel. 02-2162-2100</a>
-        <div class="flower"> 화환은 정중히 사양합니다</div>
       </div>
       <div id="daumRoughmapContainer1646132232017" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
     </section>
@@ -205,34 +204,34 @@
     <section class="gallery">
       <h2 class="blind">방명록</h2>
       <div class="tit">
-        <span class="ico husband">&nbsp;</span>
         <span>방명록</span>
-        <span class="ico wife">&nbsp;</span>
       </div>
-      <div class="addComment">
+      <div class="add-comment">
         <form>
           <div class="form-row">
-            <div class="col commentInput">
-              <input type="text" class="form-control" id="username" maxlength="10" placeholder="이름">
+            <div class="comment-input">
+              <input type="text" id="username" maxlength="10" placeholder="이름">
             </div>
-            <div class="col commentInput">
-              <input type="text" class="form-control" id="text" maxlength="100" placeholder="메시지">
+            <div class="comment-input">
+              <input type="text" id="comment" maxlength="100" placeholder="메시지">
             </div>
-            <div class="col">
-              <button type="button" class="btn btn-outline-dark" id="pushComment">보내기</button>
+            <div class="button-row">
+              <button type="button" id="push-comment">보내기</button>
             </div>
           </div>
         </form>
       </div>
-      <div id="comments"></div>
-      <div class="commentMore">
-        <button type="button" class="btn btn-outline-success" id="pullComments">더 불러오기</button>
+      <div id="comments">
+        <div id="comment-end"></div>
+      </div>
+      <div class="comment-more">
+        <button type="button" id="pull-comments">더 불러오기</button>
       </div>
     </section>
     <aside class="share">
       <div id="fb-root"></div>
       <h2 class="blind">공유하기</h2>
-      <button type="button" id="btnKakaoTalk" class="kakaotalk">
+      <button type="button" id="btn-kakao-talk" class="kakaotalk">
         <span>카카오톡<br />공유하기 </span>
       </button>
     </aside>

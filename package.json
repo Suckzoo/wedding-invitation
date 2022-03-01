@@ -12,10 +12,12 @@
     "@parcel/transformer-sass": "^2.3.2",
     "@parcel/transformer-webmanifest": "^2.3.2",
     "parcel": "^2.3.2",
-    "posthtml-expressions": "^1.9.0"
+    "posthtml-expressions": "^1.9.0",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.0.0",
+    "firebase": "^9.6.7",
     "lightgallery": "^2.4.0"
   }
 }

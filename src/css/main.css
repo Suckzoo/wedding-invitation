@@ -448,7 +448,7 @@ main {
 /* 안내사항 */
 .guide {
   text-align: left;
-  padding: 5rem 0;
+  /* padding: 5rem 0; */
   background-color: #eee;
 }
 .guide ul {
@@ -586,22 +586,46 @@ main {
 }
 
 /* Comments */
-.addComment{
+.add-comment {
   padding: 1rem;
 }
-.commentInput{
+.comment-input{
   padding-bottom: 0.5rem;
-
 }
-.commentTable{
+.comment-input input{
+  width: 100%;
+  font-size: 0.6rem;
+  border: 0;
+  border-bottom: 1px solid #000;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  padding: 0.5rem 0;
+}
+
+.button-row button {
+  width: 50%;
+  font-size: 0.5rem;
+  border: 1px solid #000;
+  border-radius: 0.2rem; 
+  background-color: transparent;
+  color: #000;
+  padding: 0.2rem 0;
+  margin-top: 0.5rem;
+}
+
+.button-row button:hover {
+  transition: 0.5s;
+  background-color: #000;
+  color: #fff;
+}
+.comment-table{
   width: 100%;
 }
-.commentList{
-
+.comment-list{
   display: flex;
   margin-bottom: 0.5rem;
 }
-.commentUser{
+.comment-user{
   width:30%;
   text-align: center; 
   font-size: 0.7rem;
@@ -609,7 +633,7 @@ main {
   word-break : break-all;
   padding-left: 0.5rem;
 }
-.commentText{
+.comment-text{
   width: 70%;
   text-align: left;
   font-size: 0.8rem;
@@ -618,11 +642,57 @@ main {
   padding-right: 2.5rem;
 }
 
-.commentMore{
+.comment-more {
   padding-bottom: 5rem;
   padding-top: 0.5rem;
 }
 
+.comment-more button {
+  width: 100%;
+  font-size: 0.65rem;
+  border: 0;
+  background-color: transparent;
+  color: #000;
+  padding: 0.4rem;
+  margin-top: 0.5rem;
+}
+.comment-more button:hover {
+  background-color: #ddd;
+}
+
+
+.comment-entry {
+  border-bottom: 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  margin: 0 48px 16px;
+  padding: 20px;
+  position: relative;
+}
+.comment-entry .row {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.comment-entry .row .name {
+  font-size: 15px;
+  text-align: left;
+}
+.comment-entry .date {
+  color: #aaa;
+  font-size: 11px;
+}
+.comment-entry .message {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+
+/*
 input[type="text"],
 select.form-control {
   background: transparent;
@@ -668,3 +738,4 @@ select.form-control:focus {
 .btn-outline-success:focus{
   box-shadow: none !important; 
 }
+*/
