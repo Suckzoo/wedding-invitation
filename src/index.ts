@@ -194,7 +194,6 @@ function initCalendar(targetDate: Date) {
     row.className = 'row';
 
     for(let i = 0; i < startOfMonth.getDay(); i++) {
-        alert('no');
         const cell = document.createElement('time');
         cell.innerHTML = '&nbsp;';
         row.appendChild(cell);
