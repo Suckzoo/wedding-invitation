@@ -273,10 +273,12 @@ main {
   height: 27rem;
   width: 100%;
 }
+/*
 .gallery .container a {
   text-decoration: none;
 }
-.gallery .container li {
+*/
+.gallery .container a {
   position: absolute;
   top: 0;
   left: 0.5rem;
@@ -288,42 +290,42 @@ main {
   background-repeat: no-repeat;
   background-color: #ddd;
 }
-.gallery .container li.item_1 {
+.gallery .container a.item_1 {
   background-image: url("../assets/images/thumbnail.jpg");
   height: 10.5rem;
 }
-.gallery .container li.item_2 {
+.gallery .container a.item_2 {
   background-image: url("../assets/images/thumbnail.jpg");
   background-position: center 4%;
   left: 7.75rem;
 }
-.gallery .container li.item_3 {
+.gallery .container a.item_3 {
   background-image: url("../assets/images/thumbnail.jpg");
   left: auto;
   right: 0.5rem;
 }
-.gallery .container li.item_4 {
+.gallery .container a.item_4 {
   background-image: url("../assets/images/thumbnail.jpg");
   top: 5.38rem;
   left: 7.75rem;
 }
-.gallery .container li.item_5 {
+.gallery .container a.item_5 {
   background-image: url("../assets/images/thumbnail.jpg");
   top: 5.38rem;
   left: auto;
   right: 0.5rem;
 }
-.gallery .container li.item_6 {
+.gallery .container a.item_6 {
   background-image: url("../assets/images/thumbnail.jpg");
   background-position: center 4%;
   top: 10.75rem;
 }
-.gallery .container li.item_7 {
+.gallery .container a.item_7 {
   background-image: url("../assets/images/thumbnail.jpg");
   background-position: center 10%;
   top: 16.1rem;
 }
-.gallery .container li.item_8 {
+.gallery .container a.item_8 {
   background-image: url("../assets/images/thumbnail.jpg");
 
   top: 10.75rem;
@@ -331,31 +333,31 @@ main {
   width: 14.25rem;
   height: 10.5rem;
 }
-.gallery .container li.item_9 {
+.gallery .container a.item_9 {
   background-image: url("../assets/images/thumbnail.jpg");
   top: 21.5rem;
 }
-.gallery .container li.item_10 {
+.gallery .container a.item_10 {
   background-image: url("../assets/images/thumbnail.jpg");
   top: 21.5rem;
   left: 7.75rem;
 }
-.gallery .container li.item_11 {
+.gallery .container a.item_11 {
   background-image: url("../assets/images/thumbnail.jpg");
   top: 21.5rem;
   left: auto;
   right: 0.5rem;
 }
-.gallery .container li.item_12 {
+.gallery .container a.item_12 {
   background-image: url("../assets/images/thumbnail.jpg");
   top: 26.9rem;
 }
-.gallery .container li.item_13 {
+.gallery .container a.item_13 {
   background-image: url("../assets/images/thumbnail.jpg");
   top: 26.9rem;
   left: 7.75rem;
 }
-.gallery .container li.item_14 {
+.gallery .container a.item_14 {
   background-image: url("../assets/images/thumbnail.jpg");
   left: auto;
   top: 26.9rem;
