@@ -1,0 +1,13 @@
+{
+  "short_name": "WeddingInvitation",
+  "name": "Invitation",
+  "icons": [
+    {
+      "src": "./assets/images/icon.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen"
+}

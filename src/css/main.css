@@ -1,0 +1,668 @@
+html {
+  font-size: 4.445vmin;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 1rem;
+  font-family: "Nanum Gothic", "Nanum Myeongjo", serif;
+  background-color: #eee;
+}
+
+button[type="button"] {
+  cursor: pointer;
+  outline: none;
+}
+
+.blind {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.bg-color-red {
+  background-color: #fd2c02;
+}
+.bg-color-blue-1 {
+  background-color: #3255df;
+}
+.bg-color-blue-2 {
+  background-color: #738efa;
+}
+.bg-color-green-1 {
+  background-color: #4aaf53;
+}
+.bg-color-yellow {
+  background-color: #f5be0c;
+}
+.bg-color-green-2 {
+  background-color: #048b70;
+}
+.bg-color-pink {
+  background-color: #fc6fb8;
+}
+
+main {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+  background-repeat: repeat;
+  overflow: hidden;
+}
+
+/* 소개 */
+.info {
+  position: relative;
+  max-height: 50rem;
+  font-family: "Nanum Myeongjo";
+}
+.info .dday {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  color: black;
+  z-index: 10;
+}
+
+.info img {
+  display: block;
+  width: 100%;
+}
+.info .img_visual {
+  min-height: 18rem;
+}
+.info .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24rem;
+  overflow: hidden;
+}
+.info .tit {
+  padding: 3rem 0;
+  letter-spacing: 0.2rem;
+}
+.info .tit em {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+}
+.info .tit em:last-child {
+  margin-left: 0.3rem;
+}
+.info address {
+  margin-top: 1rem;
+}
+
+/* 인사말 */
+.greeting {
+  margin-top: 6rem;
+  font-family: "Nanum Myeongjo";
+}
+.greeting .message {
+  margin-bottom: 5rem;
+  padding: 9rem 3.2rem 4rem 3.2rem;
+  text-align: left;
+  background-image: url("../assets/images/ring.png");
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.greeting .message li {
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  line-height: 0.8rem;
+  border-bottom: none;
+}
+.greeting .message p {
+  color: #666;
+  line-height: 1.5rem;
+}
+.message-small {
+  font-size: 0.7rem;
+}
+/*
+.greeting .message p::first-letter {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #555;
+}
+*/
+.greeting .family p {
+  position: relative;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.greeting .family em {
+  font-size: 1rem;
+}
+.greeting .family em:first-child::after {
+  content: ".";
+  display: inline-block;
+  position: relative;
+  font-size: 0.813rem;
+  font-weight: bold;
+  top: -0.3rem;
+  text-align: center;
+  padding: 0 0.3rem;
+}
+.greeting .family strong {
+  font-size: 1.1rem;
+}
+
+
+/* 달력 */
+.calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffdc6f;
+  margin-top: 5rem;
+  padding-top : 1.5rem;
+  padding-bottom : 0;
+}
+.calendar .contents {
+  width: 90vw;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0 1rem 0;
+  border-bottom: solid 2px #f6f6f6;
+  color: #b99951;
+}
+.calendar .header .tit {
+  margin-left: 1rem;
+}
+.calendar .header .tit em {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.calendar .header time {
+  font-size: 0.8rem;
+  color: #999;
+  margin-right: 1rem;
+}
+.calendar .contents .row {
+  display: flex;
+  justify-content: space-around;
+}
+.calendar .contents .row time {
+  width: calc(100% / 7);
+  padding: 0.5rem 0.3rem;
+  margin: 0.3rem;
+}
+.calendar .contents .row time:first-child {
+  color: #ff6666;
+}
+.calendar .contents .row .active {
+  background-color: #ffdc6f;
+  color: #fff;
+  border-radius: 50%;
+}
+
+/* 코비드 안내 */
+.covid-noti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffdc6f; 
+  padding-bottom: 1rem;  
+  font-size: 0.7rem;
+  color : #4e3e0a;
+}
+
+/* 갤러리 */
+.gallery {
+  margin-top: 10rem;
+}
+.gallery .tit {
+  display: inline-block;
+  width: 8rem;
+  border-bottom: solid 1px #a7a6a6;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-family: "Nanum Myeongjo";
+}
+.gallery .tit > .ico {
+  display: inline-block;
+  width: 1rem;
+  margin: 0 0.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/*
+.gallery .tit > .husband {
+  background-image: url(../images/icon/husband.png);
+  background-position: left center;
+}
+.gallery .tit > .wife {
+  background-image: url(../images/icon/wife.png);
+  background-position: left center;
+}
+.gallery .tit:after {
+  display: block;
+  content: "";
+  background-image: url(../images/icon/wife.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+*/
+.gallery .container {
+  display: block;
+  position: relative;
+  height: 27rem;
+  width: 100%;
+}
+.gallery .container a {
+  text-decoration: none;
+}
+.gallery .container li {
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  width: 7rem;
+  height: 5.1rem;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ddd;
+}
+.gallery .container li.item_1 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  height: 10.5rem;
+}
+.gallery .container li.item_2 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  background-position: center 4%;
+  left: 7.75rem;
+}
+.gallery .container li.item_3 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  left: auto;
+  right: 0.5rem;
+}
+.gallery .container li.item_4 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  top: 5.38rem;
+  left: 7.75rem;
+}
+.gallery .container li.item_5 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  top: 5.38rem;
+  left: auto;
+  right: 0.5rem;
+}
+.gallery .container li.item_6 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  background-position: center 4%;
+  top: 10.75rem;
+}
+.gallery .container li.item_7 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  background-position: center 10%;
+  top: 16.1rem;
+}
+.gallery .container li.item_8 {
+  background-image: url("../assets/images/thumbnail.jpg");
+
+  top: 10.75rem;
+  left: 7.75rem;
+  width: 14.25rem;
+  height: 10.5rem;
+}
+.gallery .container li.item_9 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  top: 21.5rem;
+}
+.gallery .container li.item_10 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  top: 21.5rem;
+  left: 7.75rem;
+}
+.gallery .container li.item_11 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  top: 21.5rem;
+  left: auto;
+  right: 0.5rem;
+}
+.gallery .container li.item_12 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  top: 26.9rem;
+}
+.gallery .container li.item_13 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  top: 26.9rem;
+  left: 7.75rem;
+}
+.gallery .container li.item_14 {
+  background-image: url("../assets/images/thumbnail.jpg");
+  left: auto;
+  top: 26.9rem;
+  left: auto;
+  right: 0.5rem;
+}
+.gallery .container img {
+  width: 100%;
+  visibility: hidden;
+}
+.gallery .description {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+}
+
+/* 영상 */
+.video {
+  margin-top: 7rem;
+  padding: 0 1rem;
+}
+
+/* 오시는길 */
+.location {
+  margin-top: 10rem;
+  background-color: #fafafa;
+}
+.location .header {
+  padding: 1.2rem 1rem;
+  text-align: left;
+}
+.location .header .addr_fst {
+  font-size: 1rem;
+}
+.location .header .addr_lst {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0.5rem 0 0.3rem 0;
+}
+.location .header .tel {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #666;
+}
+.location .third_party {
+  padding: 0.5rem 0;
+}
+.location .third_party ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2rem;
+}
+.location .third_party button {
+  width: 4rem;
+  height: 5.5rem;
+  font-size: 0.7rem;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+}
+/*
+.location .third_party .kakaonavi {
+  background-image: url("../../src/images/app/ico_kakaonavi.png");
+}
+.location .third_party .kakaomap {
+  background-image: url("../../src/images/app/ico_kakaomap.png");
+}
+.location .third_party .navermap {
+  background-image: url("../../src/images/app/ico_navermap.png");
+}
+.location .third_party .tmap {
+  background-image: url("../../src/images/app/ico_tmap.png");
+}
+*/
+.location .third_party span {
+  position: relative;
+  top: 2.2rem;
+}
+
+.location .flower{
+  color: #888;
+  font-size: 0.6rem; 
+  padding-top: 1rem;
+}
+
+/* 안내사항 */
+.guide {
+  text-align: left;
+  padding: 5rem 0;
+  background-color: #eee;
+}
+.guide ul {
+  padding: 2rem 1rem 2rem 1rem;
+  background-color: #fff;
+}
+.guide ul li {
+  padding: 1rem 0;
+  border-bottom: solid 2px #eee;
+}
+.guide dl dt {
+  margin-bottom: 0.7rem;
+}
+.guide dl dd {
+  position: relative;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
+  line-height: 1rem;
+}
+.guide .bus ul {
+  margin-top: 0.5rem;
+  padding: 0;
+}
+.guide .bus li {
+  display: flex;
+  margin-top: 0.3rem;
+  padding: 0;
+  line-height: 0.8rem;
+  border-bottom: none;
+  font-size: 0.8rem;
+}
+.guide .bus .tit {
+  height: 0.78rem;
+  text-align: center;
+  white-space: nowrap;
+  margin-right: 0.3rem;
+  color: #fff;
+  border-radius: 0.2rem;
+}
+.guide .bus span {
+  padding: 0.2rem;
+  color: #888;
+}
+.guide .bus span:not(.tit) {
+  line-height: 1rem;
+  padding: 0.08rem 0 0 0;
+}
+.guide .bank {
+  border-bottom: none;
+}
+.guide .bank dd {
+  margin-top: 0.3rem;
+}
+.guide .bank a {
+  text-decoration: none;
+  color: #888;
+}
+.guide .bank span:after {
+  position: relative;
+  border-right: 1px solid #bbb;
+  top: -0.1rem;
+  content: "";
+  margin: 0 0.2rem 0 0.5rem;
+  font-size: 0.5rem;
+}
+.guide .noti {
+  color: #f20000;
+}
+
+/* 공유하기 */
+.share {
+  padding: 1.5rem 0;
+  background-color: #333;
+}
+.share ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2rem;
+}
+.share button {
+  width: 4rem;
+  font-size: 0.7rem;
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+  line-height: 0.8rem;
+  white-space: nowrap;
+}
+.share img {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.share button {
+  width: 4rem;
+  height: 6.2rem;
+  font-size: 0.7rem;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+}
+
+.share .kakaotalk {
+  background-image: url("../assets/images/share.png");
+}
+/*
+.share .facebook {
+  background-image: url("../../src/images/app/ico_facebook.png");
+}
+.share .bride {
+  background-image: url("../../src/images/app/ico_bride.png");
+}
+.share .qrcode {
+  background-image: url("../../src/images/app/mask.png");
+}
+*/
+.share span {
+  position: relative;
+  top: 2.2rem;
+}
+
+/* DeskTop */
+@media all and (min-width: 720px) {
+  html {
+    font-size: 2rem;
+  }
+  main {
+    box-shadow: 0rem 0rem 0.5rem #999;
+  }
+}
+
+/* Comments */
+.addComment{
+  padding: 1rem;
+}
+.commentInput{
+  padding-bottom: 0.5rem;
+
+}
+.commentTable{
+  width: 100%;
+}
+.commentList{
+
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.commentUser{
+  width:30%;
+  text-align: center; 
+  font-size: 0.7rem;
+  color: gray;
+  word-break : break-all;
+  padding-left: 0.5rem;
+}
+.commentText{
+  width: 70%;
+  text-align: left;
+  font-size: 0.8rem;
+  word-break : break-all; 
+  padding-left: 0.5rem;
+  padding-right: 2.5rem;
+}
+
+.commentMore{
+  padding-bottom: 5rem;
+  padding-top: 0.5rem;
+}
+
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-outline-dark{
+  border-color: #212529 !important;
+  width: 50%;
+  background: white !important;
+  font-size: 0.5rem;
+}
+
+.btn-outline-dark:hover{
+  color: white;
+  background: black !important;
+}
+
+.btn-outline-dark:focus {
+  box-shadow: none !important;
+}
+
+.btn-outline-success{
+  text-decoration: underline;
+  background: white !important;
+  color : #b99951 !important;
+  font-size: 0.5rem;
+}
+.btn-outline-success:hover{
+  color: white !important;
+  background: #b99951 !important;
+}
+.btn-outline-success:focus{
+  box-shadow: none !important; 
+}
