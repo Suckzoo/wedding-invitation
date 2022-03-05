@@ -105,11 +105,10 @@ main {
 
 /* 인사말 */
 .greeting {
-  margin-top: 6rem;
   font-family: "Nanum Myeongjo";
 }
 .greeting .message {
-  margin-bottom: 5rem;
+  margin-top: 6rem;
   padding: 9rem 3.2rem 4rem 3.2rem;
   text-align: left;
   background-image: url("../assets/images/ring.png");
@@ -127,6 +126,25 @@ main {
 .greeting .message p {
   color: #666;
   line-height: 1.5rem;
+}
+.greeting .invitation {
+  margin-bottom: 5rem;
+  padding: 0rem 3.2rem 4rem 3.2rem;
+  text-align: left;
+}
+.greeting .invitation li {
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  line-height: 0.8rem;
+  border-bottom: none;
+}
+.greeting .invitation p {
+  color: #666;
+  line-height: 1.5rem;
+}
+.greeting .family {
+  margin-top: 6rem;
 }
 .message-small {
   font-size: 0.7rem;
