@@ -108,7 +108,7 @@ main {
   font-family: "Nanum Myeongjo";
 }
 .greeting .message {
-  margin-top: 6rem;
+  margin-top: 2rem;
   padding: 9rem 3.2rem 4rem 3.2rem;
   text-align: left;
   background-image: url("../assets/images/ring.png");
@@ -128,7 +128,6 @@ main {
   line-height: 1.5rem;
 }
 .greeting .invitation {
-  margin-bottom: 5rem;
   padding: 0rem 3.2rem 4rem 3.2rem;
   text-align: left;
 }
