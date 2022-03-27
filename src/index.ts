@@ -7,12 +7,12 @@ import lgZoom from 'lightgallery/plugins/zoom'
 
 import './js/image.d';
 import './js/kakao.d';
-import * as thumbnail from './assets/images/thumbnail.jpg';
+import * as mainImage from './assets/images/6.jpg';
 
 
 let app = null;
 let db = null;
-let lastSnapshot;
+let lastSnapshot = null;
 
 function initLightGallery() {
     lightGallery(document.getElementById('lightgallery'), {
@@ -32,9 +32,9 @@ function initKakaoMap() {
     2. html로 공유하기 -> 일반 지도 코드에서 script 부분만 가져오기
     */
     new daum.roughmap.Lander({
-		"timestamp" : "1646132232017",
-		"key" : "29beq",
-	}).render();  
+        "timestamp": "1646132232017",
+        "key": "29beq",
+    }).render();
 }
 
 function initFirebase() {
@@ -82,11 +82,7 @@ function addComment(commentBook, location, comment) {
 
 async function pullComments() {
     const commentCollection = collection(db, 'visitor-comments');
-    let commentQuery = query(
-        commentCollection,
-        orderBy('timestamp', 'desc'),
-        limit(10),
-    );
+    let commentQuery;
     if (lastSnapshot) {
         commentQuery = query(
             commentCollection,
@@ -94,10 +90,18 @@ async function pullComments() {
             startAfter(lastSnapshot),
             limit(10)
         )
+    } else {
+        commentQuery = query(
+            commentCollection,
+            orderBy('timestamp', 'desc'),
+            limit(10),
+        );
     }
     const commentBook = document.getElementById('comments');
     const snapshots = await getDocs(commentQuery);
-    lastSnapshot = snapshots.docs[snapshots.docs.length - 1];
+    if (snapshots.docs.length) {
+        lastSnapshot = snapshots.docs[snapshots.docs.length - 1];
+    }
     snapshots
         .docs
         .map(doc => doc.data())
@@ -137,7 +141,7 @@ function registerOnclickListeners() {
             content: {
                 title: '석주, 유라 결혼식에 초대합니다!',
                 description: '5/22(일) AM 11:30분 신도림라마다호텔',
-                imageUrl: thumbnail,
+                imageUrl: mainImage,
                 link: {
                     mobileWebUrl: 'https://suckzoo.github.io/wedding-invitation',
                     webUrl: 'https://suckzoo.github.io/wedding-invitation'
@@ -193,14 +197,14 @@ function initCalendar(targetDate: Date) {
     root.appendChild(row);
     row.className = 'row';
 
-    for(let i = 0; i < startOfMonth.getDay(); i++) {
+    for (let i = 0; i < startOfMonth.getDay(); i++) {
         const cell = document.createElement('time');
         cell.innerHTML = '&nbsp;';
         row.appendChild(cell);
     }
     let currDay = startOfMonth.getDay();
     let currDate = 1;
-    while(currDate <= eomDate) {
+    while (currDate <= eomDate) {
         const cell = document.createElement('time');
         cell.setAttribute('datetime', `${year}-${month + 1}-${currDate}`);
         cell.innerHTML = currDate.toString();
@@ -211,7 +215,7 @@ function initCalendar(targetDate: Date) {
         currDate++;
         currDay++;
         if (currDate > eomDate) {
-            for(let i = 0; i < 7 - currDay; i++) {
+            for (let i = 0; i < 7 - currDay; i++) {
                 const cell = document.createElement('time');
                 cell.innerHTML = '&nbsp;';
                 row.appendChild(cell);
@@ -228,10 +232,31 @@ function initCalendar(targetDate: Date) {
     }
 }
 
+function reveal() {
+    const sections = document.querySelectorAll("section");
+    for (let i = 0; i < sections.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = sections[i].getBoundingClientRect().top;
+        console.log(sections[i].classList);
+        if (elementTop < windowHeight) {
+            sections[i].classList.add("fade-in");
+        }
+    }
+}
 
-(function() {
-    // js month는 0월부터다!!!!
-    initCalendar(new Date(2022, 4, 22, 11, 30));
+function calculateDDay(date: Date) {
+    const dday = document.getElementById('dday')
+    const timeDiff = date.getTime() - new Date().getTime();
+    const d = Math.floor(timeDiff / 864e5) + 1;
+    dday.innerHTML = d > 0 ? `D-${d}` : `D+${d}`;
+}
+
+(function () {
+    reveal();
+    window.addEventListener('scroll', reveal);
+    const targetDate = new Date('2022-05-22T11:30:00+0900');
+    calculateDDay(targetDate);
+    initCalendar(targetDate);
     initLightGallery();
     initKakaoSDK();
     initKakaoMap();
