@@ -357,42 +357,41 @@ main {
 }
 .gallery .container a.item_2 {
   background-image: url("../assets/images/2.jpg");
-  background-position: center 4%;
-  left: 7.75rem;
-}
-.gallery .container a.item_3 {
-  background-image: url("../assets/images/3.jpg");
-  left: 15rem;
-  right: 0.5rem;
-}
-.gallery .container a.item_4 {
-  background-image: url("../assets/images/4.jpg");
-  top: 5.38rem;
-  left: 7.75rem;
-}
-.gallery .container a.item_5 {
-  background-image: url("../assets/images/5.jpg");
-  top: 5.38rem;
-  left: 15rem;
-  right: 0.5rem;
-}
-.gallery .container a.item_6 {
-  background-image: url("../assets/images/6.jpg");
-  background-position: center 4%;
-  top: 10.75rem;
-}
-.gallery .container a.item_7 {
-  background-image: url("../assets/images/7.jpg");
-
-  top: 10.75rem;
   left: 7.75rem;
   width: 14.25rem;
   height: 10.5rem;
 }
+.gallery .container a.item_3 {
+  background-image: url("../assets/images/3.jpg");
+  top: 10.75rem;
+}
+.gallery .container a.item_4 {
+  background-image: url("../assets/images/4.jpg");
+  top: 10.75rem;
+  left: 7.75rem;
+}
+.gallery .container a.item_5 {
+  background-image: url("../assets/images/5.jpg");
+  top: 10.75rem;
+  left: 15rem;
+}
+.gallery .container a.item_6 {
+  background-image: url("../assets/images/6.jpg");
+  background-position: center 4%;
+  top: 16.1rem;
+}
+.gallery .container a.item_7 {
+  background-image: url("../assets/images/7.jpg");
+  background-position: center 30%;
+  top: 16.1rem;
+  left: 7.75rem;
+}
 .gallery .container a.item_8 {
   background-image: url("../assets/images/8.jpg");
-  background-position: center 10%;
+  background-position: center 40%;
   top: 16.1rem;
+  left: 15rem;
+  right: 0.5rem;
 }
 .gallery .container a.item_9 {
   background-image: url("../assets/images/9.jpg");
