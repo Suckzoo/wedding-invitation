@@ -2,7 +2,7 @@ $main-color: #edf7f3;
 $main-color-dark: #628276;
 
 html {
-  font-size: 4.3vmin;
+  font-size: 4.4vmin;
 }
 
 @keyframes fadeInDown {
@@ -83,6 +83,7 @@ main {
   margin-top: 7rem;
   margin-bottom: 1.3rem;
   font-family: "Nanum Myeongjo";
+  font-weight: 600;
 }
 /* 소개 */
 .info {
@@ -429,13 +430,13 @@ main {
   font-size: 1rem;
 }
 .location .header .addr_lst {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #666;
-  margin: 1rem 0 0.6rem 0;
+  margin: 1rem 0 0.8rem 0;
 }
 .location .header .tel {
   text-decoration: none;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 15px;
   padding: 0.2rem 1rem;
@@ -452,7 +453,7 @@ main {
 .location .third_party button {
   width: 4rem;
   height: 5.5rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border: 0;
   background-color: transparent;
   background-size: contain;
@@ -503,7 +504,7 @@ main {
 }
 .guide dl dd {
   position: relative;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #888;
   margin-top: 0.5rem;
   line-height: 1.1rem;
@@ -739,7 +740,7 @@ input[type=checkbox]:checked {
 }
 .tab-content .row .content {
   flex: 6 1 0;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-align: left;
 }
 .tab-content .row > button {
@@ -751,7 +752,7 @@ input[type=checkbox]:checked {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3rem 0.4rem;
+  padding: 0.2rem 0.3rem;
   text-decoration: none;
   background-color: #fff;
   border-radius: 0.2rem;
@@ -771,7 +772,7 @@ input[type=checkbox]:checked {
 
 .tab-content .row .button:hover {
   transition: 0.5s;
-  background-color: #000;
+  background-color: $main-color-dark;
   color: #fff;
 }
 
@@ -866,9 +867,9 @@ input[type=checkbox]:checked {
   border-bottom: 0;
   border-radius: 8px;
   border: 1px solid #ddd;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin-bottom: 0.4rem;
-  padding: 0.6rem 0.8rem;
+  padding: 0.7rem 1rem;
   position: relative;
   line-break: anywhere;
   word-break: keep-all;
@@ -876,7 +877,7 @@ input[type=checkbox]:checked {
 .comment-entry .row {
   display: flex;
   justify-content: space-between;
-  line-height: 20px;
+  line-height: 1.4rem;
   margin-bottom: 8px;
 }
 .comment-entry .row .name {
@@ -889,7 +890,7 @@ input[type=checkbox]:checked {
 }
 .comment-entry .message {
   font-size: 0.8rem;
-  line-height: 1.1rem;
+  line-height: 1.4rem;
   margin-bottom: 8px;
   text-align: left;
 }
