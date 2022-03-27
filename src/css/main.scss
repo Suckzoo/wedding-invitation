@@ -1,5 +1,8 @@
+$main-color: #e9f5f0;
+$main-color-dark: #628276;
+
 html {
-  font-size: 4.445vmin;
+  font-size: 4.3vmin;
 }
 
 @keyframes fadeInDown {
@@ -115,6 +118,7 @@ main {
 .info .tit {
   padding: 3rem 0;
   letter-spacing: 0.2rem;
+  font-size: .9rem;
 }
 .info .tit em {
   font-size: 1.3rem;
@@ -136,10 +140,13 @@ main {
   margin-top: 2rem;
   padding: 9rem 3.2rem 4rem 3.2rem;
   text-align: left;
-  background-image: url("../assets/images/ring.png");
-  background-size: 2rem;
+  background-image: url("../assets/images/divider.png");
+  background-size: 12rem;
   background-repeat: no-repeat;
   background-position: top center;
+}
+.greeting .message ul {
+  margin-bottom: 2rem;
 }
 .greeting .message li {
   display: flex;
@@ -168,7 +175,7 @@ main {
   line-height: 1.5rem;
 }
 .greeting .family {
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 .message-small {
   font-size: 0.7rem;
@@ -209,7 +216,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #ffdc6f;
+  background-color: $main-color;
   margin-top: 5rem;
   padding-top : 1.5rem;
   padding-bottom : 1rem;
@@ -217,8 +224,6 @@ main {
 .calendar .contents {
   width: 90vw;
   box-sizing: border-box;
-  background-color: #fff;
-  border-radius: 0.5rem;
   margin: 1rem;
   padding: 0.5rem;
 }
@@ -229,8 +234,7 @@ main {
   position: relative;
   margin-bottom: 0.5rem;
   padding: 0.5rem 0 1rem 0;
-  border-bottom: solid 2px #f6f6f6;
-  color: #b99951;
+  color: $main-color-dark;
 }
 .calendar .header .tit {
   margin-left: 1rem;
@@ -241,7 +245,6 @@ main {
 }
 .calendar .header time {
   font-size: 0.8rem;
-  color: #999;
   margin-right: 1rem;
 }
 .calendar .contents .row {
@@ -252,12 +255,13 @@ main {
   width: calc(100% / 7);
   padding: 0.5rem 0.3rem;
   margin: 0.3rem;
+  font-size: .9rem;
 }
 .calendar .contents .row time:first-child {
   color: #ff6666;
 }
 .calendar .contents .row .active {
-  background-color: #ffdc6f;
+  background-color: $main-color;
   color: #fff;
   border-radius: 50%;
 }
@@ -274,7 +278,12 @@ main {
 }
 
 .calendar a {
-  color: #000;
+  padding: 1rem 4rem;
+  text-decoration: none;
+  background-color: white;
+  color: $main-color-dark;
+  font-size: 0.8rem;
+  border-radius: 2rem;
 }
 
 .covid-noti {
