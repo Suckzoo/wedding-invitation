@@ -1,4 +1,4 @@
-$main-color: #e9f5f0;
+$main-color: #edf7f3;
 $main-color-dark: #628276;
 
 html {
@@ -76,7 +76,14 @@ main {
   background-repeat: repeat;
   overflow: hidden;
 }
-
+.section-title {
+  display: inline-block;
+  width: 8rem;
+  padding-bottom: 0.3rem;
+  margin-top: 7rem;
+  margin-bottom: 1.3rem;
+  font-family: "Nanum Myeongjo";
+}
 /* 소개 */
 .info {
   position: relative;
@@ -96,7 +103,7 @@ main {
   border-radius: 5px;
   font-size: 1.3rem;
   color: white;
-  background-color: black;
+  background-color: $main-color-dark;
   opacity: 0.7;
 }
 
@@ -137,8 +144,8 @@ main {
   font-family: "Nanum Myeongjo";
 }
 .greeting .message {
-  margin-top: 2rem;
-  padding: 9rem 3.2rem 4rem 3.2rem;
+  margin-top: 3rem;
+  padding: 8rem 3.2rem 4rem 3.2rem;
   text-align: left;
   background-image: url("../assets/images/divider.png");
   background-size: 12rem;
@@ -190,7 +197,7 @@ main {
 .greeting .family p {
   position: relative;
   font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 .greeting .family em {
   font-size: 1rem;
@@ -261,8 +268,7 @@ main {
   color: #ff6666;
 }
 .calendar .contents .row .active {
-  background-color: $main-color;
-  color: #fff;
+  background-color: #fff;
   border-radius: 50%;
 }
 .calendar .contents + .break {
@@ -295,20 +301,8 @@ main {
   font-size: 0.7rem;
   color : #4e3e0a;
 }
-
 /* 갤러리 */
-.gallery {
-  margin-top: 10rem;
-}
-.gallery .tit {
-  display: inline-block;
-  width: 8rem;
-  border-bottom: solid 1px #a7a6a6;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
-  font-family: "Nanum Myeongjo";
-}
-.gallery .tit > .ico {
+.gallery .title > .ico {
   display: inline-block;
   width: 1rem;
   margin: 0 0.5rem;
@@ -417,7 +411,7 @@ main {
 }
 .gallery .description {
   margin-top: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
 
 /* 영상 */
@@ -427,25 +421,23 @@ main {
 }
 
 /* 오시는길 */
-.location {
-  margin-top: 10rem;
-  background-color: #fafafa;
-}
 .location .header {
-  padding: 1.2rem 1rem;
-  text-align: left;
+  padding: 1.7rem 1rem 1rem 1rem;
 }
 .location .header .addr_fst {
   font-size: 1rem;
 }
 .location .header .addr_lst {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #666;
-  margin: 0.5rem 0 0.3rem 0;
+  margin: 1rem 0 0.4rem 0;
 }
 .location .header .tel {
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 0.1rem 1rem;
   color: #666;
 }
 .location .third_party {
@@ -494,27 +486,26 @@ main {
 
 /* 안내사항 */
 .guide {
+  margin: 1rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
   text-align: left;
-  /* padding: 5rem 0; */
-  background-color: #eee;
 }
 .guide ul {
-  padding: 2rem 1rem 2rem 1rem;
-  background-color: #fff;
+  padding: 1rem 1.7rem;
 }
 .guide ul li {
   padding: 1rem 0;
-  border-bottom: solid 2px #eee;
 }
 .guide dl dt {
   margin-bottom: 0.7rem;
 }
 .guide dl dd {
   position: relative;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #888;
   margin-top: 0.5rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
 }
 .guide .bus ul {
   margin-top: 0.5rem;
@@ -568,8 +559,7 @@ main {
 
 /* 공유하기 */
 .share {
-  padding: 1.5rem 0;
-  background-color: #333;
+  background-color: $main-color-dark;
 }
 .share ul {
   display: flex;
@@ -577,7 +567,6 @@ main {
   padding: 0 2rem;
 }
 .share button {
-  width: 4rem;
   font-size: 0.7rem;
   border: 0;
   color: #fff;
@@ -585,25 +574,31 @@ main {
   line-height: 0.8rem;
   white-space: nowrap;
 }
-.share img {
-  display: block;
-  width: 100%;
-  margin-bottom: 0.5rem;
+.share span {
+  display: inline-block;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  font-family: 'Nanum Myeongjo';
 }
-
 .share button {
-  width: 4rem;
-  height: 6.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.7rem;
+  padding: 1.5rem 0;
   border: 0;
   background-color: transparent;
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
   white-space: nowrap;
+  width: 100%;
+  height: 100%;
 }
-
 .share .kakaotalk {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
   background-image: url("../assets/images/share.png");
 }
 /*
@@ -617,10 +612,6 @@ main {
   background-image: url("../../src/images/app/mask.png");
 }
 */
-.share span {
-  position: relative;
-  top: 2.2rem;
-}
 
 /* DeskTop */
 @media all and (min-width: 720px) {
@@ -633,10 +624,6 @@ main {
 }
 
 /* Contacts */
-.contacts {
-  margin-top: 5rem;
-}
-
 .contacts .tit {
   display: inline-block;
   width: 8rem;
@@ -653,23 +640,22 @@ main {
 
 .contacts .contents > a {
   margin: 0 0.5rem 1rem 0.5rem;
-  text-decoration: none;
-  color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 0rem 0.5rem 0rem;
+  padding: 1em;
+  color: #333;
+  font-size: 0.75rem;
   text-decoration: none;
   font-family: 'Nanum Myeongjo';
   background-color: #fff;
-  border-radius: 0.2rem;
-  border: 1px solid #000;
-  color: #000;
+  border-radius: 0.5rem;
+  border: 1px solid #a7a6a6;
 }
 
 /* Accordion styles */
 .tabs {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
   margin: 0 0.5rem 1rem 0.5rem;
   border: solid 1px #a7a6a6;
@@ -682,13 +668,13 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background: #2c3e50;
+    background: $main-color-dark;
     font-weight: bold;
     font-size: 0.75rem;
     cursor: pointer;
     /* Icon */
     &:hover {
-      background: darken(#2c3e50, 10%);
+      background: darken($main-color-dark, 10%);
     }
     &::after {
       content: "\276F";
@@ -701,7 +687,7 @@ main {
   &-content {
     max-height: 0;
     padding: 0 1em;
-    color: #2c3e50;
+    color: $main-color-dark;
     background: white;
     transition: all .35s;
     display: grid;
@@ -712,10 +698,10 @@ main {
     justify-content: flex-end;
     padding: 1em;
     font-size: 0.75em;
-    background: #2c3e50;
+    background: $main-color-dark;
     cursor: pointer;
     &:hover {
-      background: darken(#2c3e50, 10%);
+      background: darken($main-color-dark, 10%);
     }
   }
 }
@@ -727,7 +713,7 @@ input[type=checkbox] {
 }
 input[type=checkbox]:checked {
   + .tab-label {
-    background: darken(#2c3e50, 10%);
+    background: darken($main-color-dark, 10%);
     &::after {
       transform: rotate(90deg);
     }
@@ -749,7 +735,6 @@ input[type=checkbox]:checked {
   font-size: 0.7rem;
   padding-right: 20px;
   color: rgb(115,115,115);
-  font-family: 'Nanum Gothic';
 }
 .tab-content .row .content {
   flex: 6 1 0;
@@ -767,11 +752,11 @@ input[type=checkbox]:checked {
   justify-content: center;
   padding: 0.2rem 0.2rem 0.2rem 0.2rem;
   text-decoration: none;
-  font-family: 'Nanum Gothic';
   background-color: #fff;
   border-radius: 0.2rem;
   border: 1px solid #000;
   color: #000;
+  font-family: "Nanum Myeongjo", "Nanum Gothic", serif;
 }
 
 .tab-content .row .button > span {
@@ -791,9 +776,6 @@ input[type=checkbox]:checked {
 
 
 /* Comments */
-.guestbook {
-  margin-top: 10rem;
-}
 .guestbook .tit {
   display: inline-block;
   width: 8rem;
@@ -802,7 +784,6 @@ input[type=checkbox]:checked {
   margin-bottom: 1rem;
   font-family: "Nanum Myeongjo";
 }
-
 .add-comment {
   padding: 1rem;
 }
@@ -813,27 +794,29 @@ input[type=checkbox]:checked {
   width: 100%;
   font-size: 0.6rem;
   border: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ddd;
   box-shadow: none;
   -webkit-box-shadow: none;
   padding: 0.5rem 0;
+  font-family: "Nanum Myeongjo", "Nanum Gothic", serif;
 }
-
 .button-row button {
   width: 50%;
   font-size: 0.5rem;
-  border: 1px solid #000;
+  border: 1px solid #ddd;
   border-radius: 0.2rem; 
   background-color: transparent;
   color: #000;
   padding: 0.2rem 0;
   margin-top: 0.5rem;
 }
-
 .button-row button:hover {
   transition: 0.5s;
-  background-color: #000;
+  background-color: $main-color-dark;
   color: #fff;
+}
+#comments {
+  padding: 1rem;
 }
 .comment-table{
   width: 100%;
@@ -882,10 +865,12 @@ input[type=checkbox]:checked {
   border-bottom: 0;
   border-radius: 8px;
   border: 1px solid #ddd;
-  font-size: 13px;
-  margin: 0 48px 16px;
-  padding: 20px;
+  font-size: 0.7rem;
+  margin-bottom: 0.4rem;
+  padding: 0.6rem 0.8rem;
   position: relative;
+  line-break: anywhere;
+  word-break: keep-all;
 }
 .comment-entry .row {
   display: flex;
@@ -894,21 +879,26 @@ input[type=checkbox]:checked {
   margin-bottom: 8px;
 }
 .comment-entry .row .name {
-  font-size: 15px;
+  font-size: 0.5rem;
   text-align: left;
 }
 .comment-entry .date {
   color: #aaa;
-  font-size: 11px;
+  font-size: 0.4rem;
 }
 .comment-entry .message {
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 0.5rem;
+  line-height: 0.9rem;
   margin-bottom: 8px;
   text-align: left;
 }
-
-
+#pull-comments {
+  font-family: "Nanum Myeongjo", "Nanum Gothic", serif;
+  font-size: 0.5rem;
+}
+#push-comment {
+  font-family: "Nanum Myeongjo", "Nanum Gothic", serif;
+}
 /*
 input[type="text"],
 select.form-control {
