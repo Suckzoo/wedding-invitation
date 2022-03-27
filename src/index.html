@@ -196,10 +196,12 @@
                 <div class="content">
                   홍석주
                 </div>
-                <button type="button">
-                  <svg viewBox="0 0 48 48"><path fill="currentColor" class="kakao-logo_svg__st0" d="M21.9 0C9.8 0 0 7.8 0 17.3 0 23.5 4.1 28.9 10.2 32l-2.1 7.7c-.1.2 0 .5.2.7.1.1.3.2.4.2.1 0 .3-.1.4-.1l8.9-6c1.3.2 2.6.3 4 .3 12.1 0 21.9-7.8 21.9-17.3 0-9.7-9.8-17.5-22-17.5z"></path></svg>
-                  카카오페이
-                </button>
+                <a href="https://qr.kakaopay.com/FbGNLVG9F" target="_blank" class="button">
+                  <span>
+                    <svg viewBox="0 0 48 48"><path fill="currentColor" class="kakao-logo_svg__st0" d="M21.9 0C9.8 0 0 7.8 0 17.3 0 23.5 4.1 28.9 10.2 32l-2.1 7.7c-.1.2 0 .5.2.7.1.1.3.2.4.2.1 0 .3-.1.4-.1l8.9-6c1.3.2 2.6.3 4 .3 12.1 0 21.9-7.8 21.9-17.3 0-9.7-9.8-17.5-22-17.5z"></path></svg>
+                    카카오페이
+                  </span>
+                </a>
               </div>
               <div class="row">
                 <div class="label">
@@ -208,8 +210,23 @@
                 <div class="content">
                   (국민)801701-04-228385
                 </div>
-                <button type="button">
-                  계좌번호 복사
+                <button type="button" class="button" onclick="copyBankAccount('groom')">
+                  <span>
+                    계좌번호 복사
+                  </span>
+                </button>
+              </div>
+              <div class="row">
+                <div class="label">
+                  혼주계좌
+                </div>
+                <div class="content">
+                  (국민)743801-01-130457
+                </div>
+                <button type="button" class="button" onclick="copyBankAccount('groomMom')">
+                  <span>
+                    계좌번호 복사
+                  </span>
                 </button>
               </div>
             </div>
@@ -227,10 +244,12 @@
                 <div class="content">
                   이유라
                 </div>
-                <button type="button">
-                  <svg viewBox="0 0 48 48"><path fill="currentColor" class="kakao-logo_svg__st0" d="M21.9 0C9.8 0 0 7.8 0 17.3 0 23.5 4.1 28.9 10.2 32l-2.1 7.7c-.1.2 0 .5.2.7.1.1.3.2.4.2.1 0 .3-.1.4-.1l8.9-6c1.3.2 2.6.3 4 .3 12.1 0 21.9-7.8 21.9-17.3 0-9.7-9.8-17.5-22-17.5z"></path></svg>
-                  카카오페이
-                </button>
+                <a href="https://qr.kakaopay.com/FbKiQKJe6" target="_blank" class="button">
+                  <span>
+                    <svg viewBox="0 0 48 48"><path fill="currentColor" class="kakao-logo_svg__st0" d="M21.9 0C9.8 0 0 7.8 0 17.3 0 23.5 4.1 28.9 10.2 32l-2.1 7.7c-.1.2 0 .5.2.7.1.1.3.2.4.2.1 0 .3-.1.4-.1l8.9-6c1.3.2 2.6.3 4 .3 12.1 0 21.9-7.8 21.9-17.3 0-9.7-9.8-17.5-22-17.5z"></path></svg>
+                    카카오페이
+                  </span>
+                </a>
               </div>
               <div class="row">
                 <div class="label">
@@ -239,13 +258,30 @@
                 <div class="content">
                   (신한)110-459-794448
                 </div>
-                <button type="button">
-                  계좌번호 복사
+                <button type="button" class="button" onclick="copyBankAccount('bride')">
+                  <span>
+                    계좌번호 복사
+                  </span>
+                </button>
+              </div>
+              <div class="row">
+                <div class="label">
+                  혼주계좌
+                </div>
+                <div class="content">
+                  TBD
+                </div>
+                <button type="button" class="button" onclick="copyBankAccount('brideMom')">
+                  <span>
+                    계좌번호 복사
+                  </span>
                 </button>
               </div>
             </div>
           </div>
         </div>
+        <a href="tel:01040533096">신랑에게 연락하기</a>
+        <a href="tel:01098344050">신부에게 연락하기</a>
       </div>
     </section>
     <section class="guestbook">

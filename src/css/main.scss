@@ -367,7 +367,7 @@ main {
 }
 .gallery .container a.item_3 {
   background-image: url("../assets/images/3.jpg");
-  left: auto;
+  left: 15rem;
   right: 0.5rem;
 }
 .gallery .container a.item_4 {
@@ -378,7 +378,7 @@ main {
 .gallery .container a.item_5 {
   background-image: url("../assets/images/5.jpg");
   top: 5.38rem;
-  left: auto;
+  left: 15rem;
   right: 0.5rem;
 }
 .gallery .container a.item_6 {
@@ -646,6 +646,27 @@ main {
   font-family: "Nanum Myeongjo";
 }
 
+.contacts .contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts .contents > a {
+  margin: 0 0.5rem 1rem 0.5rem;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  text-decoration: none;
+  font-family: 'Nanum Myeongjo';
+  background-color: #fff;
+  border-radius: 0.2rem;
+  border: 1px solid #000;
+  color: #000;
+}
+
 /* Accordion styles */
 .tabs {
   border-radius: 8px;
@@ -684,7 +705,7 @@ main {
     background: white;
     transition: all .35s;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   &-close {
     display: flex;
@@ -712,47 +733,57 @@ input[type=checkbox]:checked {
     }
   }
   ~ .tab-content {
-    max-height: 100vh;
+    max-height: 5rem;
     padding: 1em;
   }
 }
 .tab-content .row {
   display: flex;
   justify-content: space-between;
-  font-size: 0.7rem;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 0.2rem;
 }
 .tab-content .row .label {
   flex: 2 1 0;
   text-align: right;
+  font-size: 0.7rem;
   padding-right: 20px;
   color: rgb(115,115,115);
   font-family: 'Nanum Gothic';
 }
 .tab-content .row .content {
   flex: 6 1 0;
+  font-size: 0.7rem;
   text-align: left;
 }
-.tab-content .row button {
-  flex: 3 1 0;
-  vertical-align: middle;
-  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
-  text-align: center;
-  font-size: 0.5rem;
+.tab-content .row > button {
   height: 100%;
+}
+.tab-content .row .button {
+  outline: none;
+  flex: 3 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  text-decoration: none;
   font-family: 'Nanum Gothic';
   background-color: #fff;
   border-radius: 0.2rem;
   border: 1px solid #000;
+  color: #000;
 }
 
-.tab-content .row button svg {
+.tab-content .row .button > span {
+  font-size: 0.5rem;
+}
+
+.tab-content .row .button svg {
   height: 0.7rem;
   vertical-align: middle;
 }
 
-.tab-content .row button:hover {
+.tab-content .row .button:hover {
   transition: 0.5s;
   background-color: #000;
   color: #fff;

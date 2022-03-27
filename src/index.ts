@@ -237,7 +237,6 @@ function reveal() {
     for (let i = 0; i < sections.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = sections[i].getBoundingClientRect().top;
-        console.log(sections[i].classList);
         if (elementTop < windowHeight) {
             sections[i].classList.add("fade-in");
         }
@@ -251,9 +250,21 @@ function calculateDDay(date: Date) {
     dday.innerHTML = d > 0 ? `D-${d}` : `D+${d}`;
 }
 
+async function copyBankAccount(id: string) {
+    const accounts = {
+        groom: '80170104228385',
+        groomMom: '74380101130457',
+        bride: '110459794448',
+        brideMom: '110459794448'
+    }
+    await navigator.clipboard.writeText(accounts[id]);
+    alert('계좌번호가 복사되었습니다.');
+}
+
 (function () {
     reveal();
     window.addEventListener('scroll', reveal);
+    (window as any).copyBankAccount = copyBankAccount;
     const targetDate = new Date('2022-05-22T11:30:00+0900');
     calculateDDay(targetDate);
     initCalendar(targetDate);
