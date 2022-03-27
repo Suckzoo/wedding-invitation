@@ -7,7 +7,7 @@ import lgZoom from 'lightgallery/plugins/zoom'
 
 import './js/image.d';
 import './js/kakao.d';
-import * as mainImage from './assets/images/6.jpg';
+import * as mainImage from './assets/images/3.jpg';
 
 
 let app = null;
