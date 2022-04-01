@@ -720,7 +720,7 @@ input[type=checkbox]:checked {
     }
   }
   ~ .tab-content {
-    max-height: 5rem;
+    max-height: 6rem;
     padding: 1em;
   }
 }
@@ -773,6 +773,12 @@ input[type=checkbox]:checked {
   transition: 0.5s;
   background-color: $main-color-dark;
   color: #fff;
+}
+
+.tab-content .row .button[disabled]:hover {
+  color: #000;
+  background-color: #fff;
+  cursor: not-allowed;
 }
 
 
@@ -897,6 +903,7 @@ input[type=checkbox]:checked {
   font-family: "Nanum Myeongjo", "Nanum Gothic", serif;
   font-size: 0.8rem;
 }
+
 #push-comment {
   font-family: "Nanum Myeongjo", "Nanum Gothic", serif;
 }

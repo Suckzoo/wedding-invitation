@@ -88,19 +88,22 @@ async function pullComments() {
             commentCollection,
             orderBy('timestamp', 'desc'),
             startAfter(lastSnapshot),
-            limit(10)
+            limit(5)
         )
     } else {
         commentQuery = query(
             commentCollection,
             orderBy('timestamp', 'desc'),
-            limit(10),
+            limit(5),
         );
     }
     const commentBook = document.getElementById('comments');
     const snapshots = await getDocs(commentQuery);
     if (snapshots.docs.length) {
         lastSnapshot = snapshots.docs[snapshots.docs.length - 1];
+    } else {
+        const loadMoreComment = document.getElementById('pull-comments');
+        loadMoreComment.innerHTML = '마지막 댓글입니다.';
     }
     snapshots
         .docs
