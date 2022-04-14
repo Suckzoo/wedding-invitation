@@ -775,12 +775,13 @@ input[type=checkbox] {
 
 .tab-content .row .button > span {
   font-size: 0.7rem;
-  word-break: keep-all;
+  white-space: nowrap;
 }
 
 .tab-content .row .button svg {
   height: 0.7rem;
   vertical-align: middle;
+  margin-right: 0.1rem;
 }
 
 .tab-content .row .button:hover {
