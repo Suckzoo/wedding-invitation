@@ -691,7 +691,6 @@ main {
     color: $main-color-dark;
     background: white;
     transition: all .35s;
-    display: grid;
     grid-template-rows: 1fr 1fr 1fr;
   }
   &-close {
@@ -720,8 +719,8 @@ input[type=checkbox]:checked {
     }
   }
   ~ .tab-content {
-    max-height: 6rem;
-    padding: 1em;
+    max-height: 15rem;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
   }
 }
 .tab-content .row {
@@ -730,12 +729,13 @@ input[type=checkbox]:checked {
   align-items: center;
   margin-bottom: 0.4rem;
 }
-.tab-content .row .label {
+.tab-content .label {
   flex: 2 1 0;
-  text-align: right;
-  font-size: 0.7rem;
-  padding-right: 20px;
-  color: rgb(115,115,115);
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 1.5rem 0 1rem 0;
+  color: rgb(70,70,70);
 }
 .tab-content .row .content {
   flex: 6 1 0;
