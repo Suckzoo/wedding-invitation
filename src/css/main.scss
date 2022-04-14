@@ -691,7 +691,8 @@ main {
     color: $main-color-dark;
     background: white;
     transition: all .35s;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: grid;
+    // grid-template-rows: 1fr 1fr 1fr;
   }
   &-close {
     display: flex;
@@ -742,7 +743,6 @@ input[type=checkbox] {
   margin-bottom: 0.4rem;
 }
 .tab-content .label {
-  flex: 2 1 0;
   text-align: left;
   font-size: 0.9rem;
   font-weight: 700;
@@ -750,7 +750,7 @@ input[type=checkbox] {
   color: rgb(70,70,70);
 }
 .tab-content .row .content {
-  flex: 6 1 0;
+  flex: 7 1 0;
   font-size: 0.8rem;
   text-align: left;
 }
@@ -759,8 +759,8 @@ input[type=checkbox] {
 }
 .tab-content .row .button {
   outline: none;
-  flex: 3 1 0;
   display: flex;
+  flex: 3 1 0;
   align-items: center;
   justify-content: center;
   padding: 0.2rem 0.3rem;
@@ -769,11 +769,13 @@ input[type=checkbox] {
   border-radius: 0.2rem;
   border: 1px solid #ddd;
   color: #000;
+  width: 100%;
   font-family: "Nanum Myeongjo", "Nanum Gothic", serif;
 }
 
 .tab-content .row .button > span {
   font-size: 0.7rem;
+  word-break: keep-all;
 }
 
 .tab-content .row .button svg {
