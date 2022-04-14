@@ -711,7 +711,7 @@ input[type=checkbox] {
   opacity: 0;
   z-index: -1;
 }
-input[type=checkbox]:checked {
+.tab-bride input[type=checkbox]:checked {
   + .tab-label {
     background: darken($main-color-dark, 10%);
     &::after {
@@ -720,6 +720,18 @@ input[type=checkbox]:checked {
   }
   ~ .tab-content {
     max-height: 15rem;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+  }
+}
+.tab-groom input[type=checkbox]:checked {
+  + .tab-label {
+    background: darken($main-color-dark, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 24rem;
     padding: 0rem 1.5rem 1.5rem 1.5rem;
   }
 }
