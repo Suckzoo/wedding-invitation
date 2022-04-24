@@ -1,2 +1,2 @@
-declare let daum: any;
 declare let Kakao: any;
+declare let kakao: any;

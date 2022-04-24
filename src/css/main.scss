@@ -474,6 +474,10 @@ main {
   background-image: url("../../src/images/app/ico_tmap.png");
 }
 */
+#map {
+  width: 100%;
+  height: 12rem;
+}
 .location .third_party span {
   position: relative;
   top: 2.2rem;

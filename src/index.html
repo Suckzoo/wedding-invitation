@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="./css/library.scss" />
   <link rel="stylesheet" href="./css/main.scss" />
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey={{ KAKAO_KEY }}&libraries=services"></script>
 </head>
 
 <body>
@@ -150,7 +150,7 @@
       <div class="section-title">
         <span>오시는 길</span>
       </div>
-      <div id="daumRoughmapContainer1646132232017" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
+      <div id="map"></div>
       <div class="header">
         <address class="addr_fst">
           신도림라마다호텔 5층 세인트그레이스홀
@@ -166,8 +166,8 @@
           <dl>
             <dt>지하철 및 셔틀 버스 안내</dt>
             <dd> 지하철 1&bull;2호선 신도림역 1번 출구<br />
-              (신도림역 광장 도보 5분)<br />
-              셔틀버스 타는 곳 : 신도림역 1번 출구 앞</dd>
+              셔틀버스 타는 곳 : 신도림역 1번 출구 앞<br />
+              (신도림역 광장 도보 10분)<br /></dd>
             <dd class="noti">
               5분 간격으로 운행됩니다.
             </dd>
@@ -176,7 +176,7 @@
         <li>
           <dl>
             <dt>주차 안내</dt>
-            <dd>주차장 무료 이용이 가능합니다.</dd>
+            <dd>주차장은 1시간 30분 무료 이용이 가능합니다.</dd>
           </dl>
         </li>
       </ul>
