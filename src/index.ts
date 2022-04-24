@@ -45,15 +45,12 @@ function initKakaoMap() {
       const options = {
         center: coords,
         level: 4,
-        draggable: false,
-        disableDoubleClick: true,
+        marker: {
+          position: coords,
+          text: "신도림라마다호텔",
+        },
       };
-      const map = new kakao.maps.Map(container, options);
-
-      new kakao.maps.Marker({
-        map,
-        position: coords,
-      });
+      const map = new kakao.maps.StaticMap(container, options);
     }
   });
 }
