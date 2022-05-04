@@ -299,7 +299,7 @@ async function copyBankAccount(id: string) {
   reveal();
   window.addEventListener("scroll", reveal);
   (window as any).copyBankAccount = copyBankAccount;
-  const targetDate = new Date("2022-05-22T11:30:00+0900");
+  const targetDate = new Date("2022-05-22T00:00:00+0900");
   calculateDDay(targetDate);
   initCalendar(targetDate);
   initLightGallery();
