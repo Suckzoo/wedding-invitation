@@ -280,8 +280,8 @@ function reveal() {
 function calculateDDay(date: Date) {
   const dday = document.getElementById("dday");
   const timeDiff = date.getTime() - new Date().getTime();
-  const d = Math.floor(timeDiff / 864e5) + 1;
-  dday.innerHTML = d > 0 ? `D-${d}` : `D+${d}`;
+  const d = Math.abs(Math.floor(timeDiff / 864e5) + 1);
+  dday.innerHTML = timeDiff > 0 ? `D-${d}` : `D+${d}`;
 }
 
 async function copyBankAccount(id: string) {
